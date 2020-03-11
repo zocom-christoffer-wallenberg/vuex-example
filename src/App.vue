@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <cartItem title="Goodnight Moon" author="Margaret Wise Brown" />
+    <cartCounter />
+    <checkout />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import cartItem from './components/cartItem.vue'
+import cartCounter from './components/cartCounter.vue'
+import checkout from './components/checkout.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    cartItem,
+    cartCounter,
+    checkout
   }
 }
 </script>
