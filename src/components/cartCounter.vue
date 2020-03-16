@@ -1,5 +1,6 @@
 <template>
   <section>
+      <p> Varukorgen tillhör: {{ name }}</p>
       <p>Du har lagt till {{ cartLength }} böcker</p>
       <p>Du har lagt till följande böcker:</p>
       <ul>
@@ -12,10 +13,13 @@
 export default {
     computed: {
         cartLength() {
-            return this.$store.state.cart.length;
+            return this.$store.state.cart.cart.length;
         },
         cart() {
-            return this.$store.state.cart;
+            return this.$store.state.cart.cart;
+        },
+        name() {
+            return this.$store.state.belong.name;
         }
     }
 }

@@ -25,6 +25,7 @@ export default {
       }
 
       this.$store.commit('addToCart', item);
+      this.$store.commit('setName', 'Christoffer');
     }
   }
 }
